@@ -8,3 +8,25 @@
         font-family: 'Be Vietnam Pro', sans-serif;
     }
 }
+
+@layer components {
+
+    .sidebar-tab {
+        @apply block text-center text-lg py-2 cursor-pointer hover:bg-tabHover
+    }
+
+    .rightToLeft{
+        font-size: 12em;
+        font-weight: 500;
+        animation: RightToLeft 10s infinite linear;
+    }
+
+    @keyframes RightToLeft {
+        from {
+            transform: translateX(0.3%);
+        }
+        to {
+            transform: translateX(-50%);
+        }
+    }
+}

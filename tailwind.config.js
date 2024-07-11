@@ -3,7 +3,14 @@ module.exports = {
   "./build/**/*.{html,js}"
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        background: '#f6eee3',
+        tabHover: '#ebe0d1'
+      }
+    },
   },
-  plugins: [],
+  plugins: [
+    require('daisyui')
+  ],
 }

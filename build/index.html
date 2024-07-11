@@ -8,20 +8,40 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="static/output.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/gsap.min.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+        <script src="./script.js" defer></script>
         <title>Portfolio</title>
     </head>
-<body>
-    <header>
+<body class="bg-background">
 
-    </header>
+        <nav class="fixed left-0 w-[180px] h-full shadow bg-background z-10">
+            <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            class="block h-5 w-5 stroke-current m-auto my-2 cursor-pointer">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+            <a class="sidebar-tab">Home</a>
+            <a class="sidebar-tab">About Me</a>
+            <a class="sidebar-tab">My Work</a>
+            <a class="sidebar-tab">Contact</a>
+        </nav>
 
-    <nav>
+    <main class="ml-[180px]">
 
-    </nav>
-
-    <section>
-
+    <section class="flex items-center overflow-hidden">
+        <div class="py-5 whitespace-nowrap">
+            <div class="rightToLeft flex gap-5">
+            <p>GRAPHIC DESIGNER</p>
+            <p>GRAPHIC DESIGNER</p>
+            </div>
+        </div>
     </section>
 
     <section>
@@ -35,6 +55,8 @@
     <section>
 
     </section>
+
+</main>
 
     <footer>
 
