@@ -8,34 +8,37 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="static/output.css">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/gsap.min.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
-        <script src="./script.js" defer></script>
+        <script src="static/script.js" defer></script>
         <title>Portfolio</title>
     </head>
 <body class="bg-background">
 
-        <nav class="fixed left-0 w-[180px] h-full shadow bg-background z-10">
+        <nav class="sidebar fixed left-0 w-16 h-full shadow bg-background z-10 transition-all ease-linear duration-200 delay-200">
             <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            class="block h-5 w-5 stroke-current m-auto my-2 cursor-pointer">
+            class="hamburger block h-5 w-5 stroke-current m-auto my-2 cursor-pointer transition ease-in-out duration-100 hover:scale-110">
             <path
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="2"
               d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
-            <a class="sidebar-tab">Home</a>
-            <a class="sidebar-tab">About Me</a>
-            <a class="sidebar-tab">My Work</a>
-            <a class="sidebar-tab">Contact</a>
+            <a href="#home" class="sidebar-tab opacity-0 transition ease-in-out duration-100 delay-150">Home</a>
+            <a href="#" class="sidebar-tab opacity-0 transition ease-in-out duration-100 delay-100">About Me</a>
+            <a href="#" class="sidebar-tab opacity-0 transition ease-in-out duration-100 delay-75">My Work</a>
+            <a href="#" class="sidebar-tab opacity-0 transition ease-in-out duration-100 ">Contact</a>
+            <p class="side-name opacity-100 -rotate-90 relative top-[230px] transition ease-in-out duration-75 delay-500">Renato</p>
+            <p class="side-name opacity-100 -rotate-90 relative top-36 transition ease-in-out duration-75 delay-500">Domingues</p>
+
         </nav>
 
-    <main class="ml-[180px]">
+    <main class="main ml-16">
 
-    <section class="flex items-center overflow-hidden">
+    <section id="home" class="flex items-center overflow-hidden">
         <div class="py-5 whitespace-nowrap">
             <div class="rightToLeft flex gap-5">
             <p>GRAPHIC DESIGNER</p>
