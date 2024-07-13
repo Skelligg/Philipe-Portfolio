@@ -8,14 +8,16 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="static/output.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
         <script src="static/script.js" defer></script>
+        <script src="https://cdn.tailwindcss.com"></script>
         <title>Portfolio</title>
     </head>
-<body class="bg-background">
+<body class="bg-background overflow-auto h-full">
 
-        <nav class="sidebar fixed left-0 w-16 h-full shadow bg-background z-10 transition-all ease-linear duration-200 delay-200">
+        <nav class="sidebar fixed left-0 w-16 h-full border-r border-black  bg-background z-10 transition-all ease-linear duration-200 delay-200">
             <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -29,7 +31,7 @@
           </svg>
             <a href="#home" class="sidebar-tab opacity-0 transition ease-in-out duration-100 delay-150">Home</a>
             <a href="#" class="sidebar-tab opacity-0 transition ease-in-out duration-100 delay-100">About Me</a>
-            <a href="#" class="sidebar-tab opacity-0 transition ease-in-out duration-100 delay-75">My Work</a>
+            <a href="#work" class="sidebar-tab opacity-0 transition ease-in-out duration-100 delay-75">My Work</a>
             <a href="#" class="sidebar-tab opacity-0 transition ease-in-out duration-100 ">Contact</a>
             <p class="side-name opacity-100 -rotate-90 relative top-[230px] transition ease-in-out duration-75 delay-500">Renato</p>
             <p class="side-name opacity-100 -rotate-90 relative top-36 transition ease-in-out duration-75 delay-500">Domingues</p>
@@ -38,20 +40,63 @@
 
     <main class="main ml-16">
 
-    <section id="home" class="flex items-center overflow-hidden">
-        <div class="py-5 whitespace-nowrap">
-            <div class="rightToLeft flex gap-5">
-            <p>GRAPHIC DESIGNER</p>
-            <p>GRAPHIC DESIGNER</p>
+    <section id="home" class="hero h-screen px-10">
+
+            <div class="hero-content flex-col lg:flex-row-reverse">
+              <img
+                src="assets/pfp.jpeg"
+                class="max-w-sm rounded-md shadow-2xl" />
+              <div>
+                <h1 class="text-6xl font-bold">Olá! eu sou o Renato</h1>
+                <p class="inline-block py-5 max-h-20 text-lg">
+                    Sou designer gráfico e moro em São Paulo, Brasil. Sou especializado em logotipos, 
+                    ilustrações e caligrafia. Tenho certeza de que posso criar o que você está procurando. 
+                    Dê uma olhada em meu trabalho e vamos trabalhar juntos!
+                </p>
+                <a href="#" class="fa fa-envelope-o text-3xl pt-5 pl-1 mr-5"></a>
+                <a href="#" class="fa fa-instagram text-3xl"></a>
+              </div>
             </div>
+
+    </section>
+
+    <div class="workPopUp block relative bottom-16">
+      <p class="text-center text-siteGrey drop-shadow">See my work below</p>
+      <img src="assets/arrow.png" class="h-8 rotate-90 m-auto drop-shadow">
+    </div>
+
+    <section id="work">
+      <div class="grid-container">
+
+        <div class="grid-item group bg-gradient-to-tr from-blue-100 to-blue-400 ">
+          <p class="p-photo">Caligrafia</p>
+          <img src="assets/work/bluecalig.jpg" class="work-photo opacity-0 group-hover:opacity-100">
         </div>
+        <div class="grid-item row-span-2"><img src="assets/work/fireskull.jpg" class="work-photo"></div>
+        <div class="grid-item row-span-2"></div>
+        <div class="grid-item"><img src="assets/work/bluecalig.jpg" class="work-photo"></div>
+        <div class="grid-item row-span-2">5</div>
+        <div class="grid-item ">6</div>
+        <div class="grid-item ">7</div>
+        <div class="grid-item col-span-2">8</div>
+        <div class="grid-item">9</div>
+        <div class="grid-item row-span-2">10</div>
+        <div class="grid-item ">11</div>
+        <div class="grid-item row-span-2">12</div>
+        <div class="grid-item row-span-2">13</div>
+        <div class="grid-item">14</div>
+        <div class="grid-item col-span-2">15</div>
+        <div class="grid-item row-span-2">16</div>
+        <div class="grid-item">17</div>
+        <div class="grid-item">18</div>
+        <div class="grid-item">19</div>
+
+
+      </div>
+
     </section>
 
-    <section>
-
-    </section>
-
-    <section>
+    <section >
 
     </section>
 
@@ -67,3 +112,10 @@
 
 </body>
 </html>
+
+        <!--<div class="flex items-center overflow-hidden py-5 whitespace-nowrap">
+            <div class="rightToLeft flex gap-5">
+            <p>GRAPHIC DESIGNER</p>
+            <p>GRAPHIC DESIGNER</p>
+            </div>
+        </div> -->

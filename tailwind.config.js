@@ -6,7 +6,8 @@ module.exports = {
     extend: {
       colors: {
         background: '#f6eee3',
-        tabHover: '#ebe0d1'
+        tabHover: '#ebe0d1',
+        siteGrey: '#828282'
       }
     },
   },

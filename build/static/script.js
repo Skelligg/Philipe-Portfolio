@@ -2,12 +2,31 @@ const hamburger = document.querySelector(".hamburger")
 const sideBar = document.querySelector(".sidebar")
 const sideBarTabs = document.querySelectorAll(".sidebar-tab")
 const sideNames = document.querySelectorAll(".side-name")
+const workPopUp = document.querySelector(".workPopUp");
+const workSection = document.querySelector("#work");
+gsap.registerPlugin(ScrollTrigger);
 
 init();
 
-function init(){
 
+function init(){
     hamburger.addEventListener("click",toggleSideBar)
+    gsap.from('.workPopUp', {scrollTrigger: {
+        trigger: "#home",
+        start: "top-=50 top",
+        end: "top top"
+    }, duration: 1, y: "-50%", opacity: 0, ease: 'bounce', delay: 3,
+        onComplete: () =>{
+            gsap.to(".workPopUp", {scrollTrigger: {
+                trigger: "#work", 
+                start: "top center", 
+
+                toggleActions: "play none none reverse",
+                },
+                duration: 1, ease: 'ease-in',opacity: 0 } )
+        }
+    })
+
 }
 
 function toggleSideBar(){
