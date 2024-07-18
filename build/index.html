@@ -1,121 +1,244 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="static/output.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
-        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
-        <script src="static/script.js" defer></script>
-        <script src="https://cdn.tailwindcss.com"></script>
-        <title>Portfolio</title>
-    </head>
-<body class="bg-background overflow-auto h-full">
-
-        <nav class="sidebar fixed left-0 w-16 h-full border-r border-black  bg-background z-10 transition-all ease-linear duration-200 delay-200">
-            <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            class="hamburger block h-5 w-5 stroke-current m-auto my-2 cursor-pointer transition ease-in-out duration-100 hover:scale-110">
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-            <a href="#home" class="sidebar-tab opacity-0 transition ease-in-out duration-100 delay-150">Home</a>
-            <a href="#" class="sidebar-tab opacity-0 transition ease-in-out duration-100 delay-100">About Me</a>
-            <a href="#work" class="sidebar-tab opacity-0 transition ease-in-out duration-100 delay-75">My Work</a>
-            <a href="#" class="sidebar-tab opacity-0 transition ease-in-out duration-100 ">Contact</a>
-            <p class="side-name opacity-100 -rotate-90 relative top-[230px] transition ease-in-out duration-75 delay-500">Renato</p>
-            <p class="side-name opacity-100 -rotate-90 relative top-36 transition ease-in-out duration-75 delay-500">Domingues</p>
-
-        </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="static/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"
+      defer
+    ></script>
+    <script src="static/script.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Portfolio</title>
+  </head>
+  <body class="bg-background overflow-x-hidden overflow-y-auto h-full">
+    <nav
+      class="sidebar fixed left-0 w-16 h-full border-r border-black bg-background z-10 transition-all ease-linear duration-200 delay-200"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        class="hamburger block h-5 w-5 stroke-current m-auto my-2 cursor-pointer transition ease-in-out duration-100 hover:scale-110"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"
+        ></path>
+      </svg>
+      <a
+        href="#home"
+        class="sidebar-tab invisible transition-[visibility] ease-in-out duration-100 delay-100"
+        >Início</a
+      >
+      <a
+        href="#work"
+        class="sidebar-tab invisible transition-[visibility] ease-in-out duration-100 delay-150"
+        >Trabalho</a
+      >
+      <a
+        href="#contact"
+        class="sidebar-tab invisible transition-[visibility] ease-in-out duration-200"
+        >Contato</a
+      >
+      <p
+        class="side-name opacity-100 -rotate-90 relative top-[320px] transition ease-in-out duration-75 delay-[400ms]"
+      >
+        Renato
+      </p>
+      <p
+        class="side-name opacity-100 -rotate-90 relative top-[230px] transition ease-in-out duration-75 delay-[400ms]"
+      >
+        Domingues
+      </p>
+    </nav>
 
     <main class="main ml-16">
-
-    <section id="home" class="hero h-screen px-10">
-
-            <div class="hero-content flex-col lg:flex-row-reverse">
-              <img
-                src="assets/pfp.jpeg"
-                class="max-w-sm rounded-md shadow-2xl" />
-              <div>
-                <h1 class="text-6xl font-bold">Olá! eu sou o Renato</h1>
-                <p class="inline-block py-5 max-h-20 text-lg">
-                    Sou designer gráfico e moro em São Paulo, Brasil. Sou especializado em logotipos, 
-                    ilustrações e caligrafia. Tenho certeza de que posso criar o que você está procurando. 
-                    Dê uma olhada em meu trabalho e vamos trabalhar juntos!
-                </p>
-                <a href="#" class="fa fa-envelope-o text-3xl pt-5 pl-1 mr-5"></a>
-                <a href="#" class="fa fa-instagram text-3xl"></a>
-              </div>
-            </div>
-
-    </section>
-
-    <div class="workPopUp block relative bottom-16">
-      <p class="text-center text-siteGrey drop-shadow">See my work below</p>
-      <img src="assets/arrow.png" class="h-8 rotate-90 m-auto drop-shadow">
-    </div>
-
-    <section id="work">
-      <div class="grid-container">
-
-        <div class="grid-item group bg-gradient-to-tr from-blue-100 to-blue-400 ">
-          <p class="p-photo">Caligrafia</p>
-          <img src="assets/work/bluecalig.jpg" class="work-photo opacity-0 group-hover:opacity-100">
+      <section id="home" class="hero h-screen px-10">
+        <img src="/build/assets/square.png" class="-rotate-12 h-[2000px] z-0 absolute left-[70vw] overflow-hidden shadow-lg">
+        <div class="hero-content flex-col lg:flex-row-reverse">
+          <img src="assets/pfp.jpeg" class="max-w-sm rounded-md shadow-xl" />
+          <div>
+            <h1 class="text-6xl font-bold">Olá! eu sou o Renato</h1>
+            <p class="inline-block py-5 max-h-20 text-lg">
+              Sou designer gráfico e moro em São Paulo, Brasil. Sou
+              especializado em logotipos, ilustrações e caligrafia. Tenho
+              certeza de que posso criar o que você está procurando. Dê uma
+              olhada em meu trabalho e vamos trabalhar juntos!
+            </p>
+            <a href="#contact" class="fa fa-envelope-o text-3xl pt-5 pl-1 mr-5"></a>
+            <a href="https://www.instagram.com/arte.renato/" target="_blank" class="fa fa-instagram text-3xl"></a>
+          </div>
         </div>
-        <div class="grid-item row-span-2"><img src="assets/work/fireskull.jpg" class="work-photo"></div>
-        <div class="grid-item row-span-2"></div>
-        <div class="grid-item"><img src="assets/work/bluecalig.jpg" class="work-photo"></div>
-        <div class="grid-item row-span-2">5</div>
-        <div class="grid-item ">6</div>
-        <div class="grid-item ">7</div>
-        <div class="grid-item col-span-2">8</div>
-        <div class="grid-item">9</div>
-        <div class="grid-item row-span-2">10</div>
-        <div class="grid-item ">11</div>
-        <div class="grid-item row-span-2">12</div>
-        <div class="grid-item row-span-2">13</div>
-        <div class="grid-item">14</div>
-        <div class="grid-item col-span-2">15</div>
-        <div class="grid-item row-span-2">16</div>
-        <div class="grid-item">17</div>
-        <div class="grid-item">18</div>
-        <div class="grid-item">19</div>
+      </section>
 
-
+      <div class="workPopUp block relative bottom-16">
+        <p class="text-center text-siteGrey drop-shadow ">Veja meu trabalho abaixo</p>
+        <img src="assets/arrow.png" class="h-8 rotate-90 m-auto drop-shadow" />
       </div>
 
-    </section>
+      <section id="work">
+        <div class="grid-container">
+          <div
+            class="grid-item group bg-gradient-to-tr from-blue-100 to-blue-400"
+          >
+          <p class="p-photo left-5">
+            Design exclusivo de caligrafia azul</p>
+            <img
+              src="assets/work/bluecalig.jpg"
+              class="work-photo opacity-0 group-hover:opacity-100"
+            />
+          </div>
+          <div class="grid-item row-span-2">
+            <img src="assets/work/fireskull.jpg" class="work-photo" />
+          </div>
+          <div
+            class="grid-item row-span-2 group bg-gradient-to-r from-red-300 to-pink-400"
+          >
+          <p class="p-photo left-1">Desenho de tatuagem finalizado para cliente</p>
+            <img
+              src="assets/work/flowers.jpg"
+              class="work-photo opacity-0 group-hover:opacity-100"
+            />
+          </div>
+          <div class="grid-item">
+            <img src="assets/work/betafish.jpg" class="work-photo" />
+          </div>
+          <div class="grid-item row-span-2">
+            <img src="assets/work/ratking.jpg" class="work-photo" />
+          </div>
+          <div class="grid-item">
+            <img src="assets/work/soli.jpg" class="work-photo" />
+          </div>
+          <div class="grid-item">
+            <img src="assets/work/1992calig.jpg" class="work-photo" />
+          </div>
+          <div
+            class="grid-item col-span-2 pt-[50%] group bg-gradient-to-tl from-amber-500 to-yellow-200"
+          >
+          <p class="p-photo left-[130px]">Calligraffiti monstro feito pra @barbearia12_deoutubro</p>
+            <img
+              src="assets/work/caligwall.jpg"
+              class="work-photo opacity-0 group-hover:opacity-100"
+            />
+          </div>
+          <div
+            class="grid-item group bg-gradient-to-tr from-blue-100 to-cyan-300"
+          >
+          <p class="p-photo">Desenho de batimentos e pata de cachorro para tatuagem.</p>
+            <img
+              src="assets/work/pawtattoo.jpg"
+              class="work-photo opacity-0 group-hover:opacity-100"
+            />
+          </div>
+          <div class="grid-item row-span-2">
+            <img src="assets/work/romanstatue.jpg" class="work-photo" />
+          </div>
+          <div class="grid-item">
+            <img src="assets/work/elephant.jpg" class="work-photo" />
+          </div>
+          <div class="grid-item row-span-2">
+            <img src="assets/work/koifish.jpg" class="work-photo" />
+          </div>
+          <div class="grid-item row-span-2">
+            <img src="assets/work/tiger.jpg" class="work-photo" />
+          </div>
+          <div
+            class="grid-item group bg-gradient-to-bl from-white to-slate-300"
+          >
+          <p class="p-photo">Mais um rótulo pra @806beer desenvolvido e aprovado com sucesso!</p>
+            <img
+              src="assets/work/beer.jpg"
+              class="work-photo opacity-0 group-hover:opacity-100"
+            />
+          </div>
+          <div class="grid-item col-span-2 pt-[50%]">
+            <img src="assets/work/parrotcalig.jpg" class="work-photo" />
+          </div>
+          <div
+            class="grid-item row-span-2 group bg-gradient-to-tl from-lime-300 to-green-400"
+          >
+          <p class="p-photo left-36">Saravá Ogum!</p>
+            <img
+              src="assets/work/seahorse.jpg"
+              class="work-photo opacity-0 group-hover:opacity-100"
+            />
+          </div>
+          <div class="grid-item">
+            <img src="assets/work/deerskull.jpg" class="work-photo" />
+          </div>
+          <div class="grid-item">
+            <img src="assets/work/shopfront.jpg" class="work-photo" />
+          </div>
+          <div class="grid-item">
+            <img src="assets/work/jersey.jpg" class="work-photo" />
+          </div>
+        </div>
+      </section>
 
-    <section >
+      <section id="contact" class="h-[55vh] pt-28 px-10 flex justify-center mt-16 max-w-[1100px] m-auto">
+        <div class=" pr-5 max-w-[500px]">
+          <h1 class="text-5xl font-bold text-right">Quer trabalhar em algo?</h1>
+          <p class="text-xl text-right">Entre em contato e eu responderei assim que possível.  Estou ansioso para trabalhar com você.</p>
+          </div>
+          <div class="">
+          <form  action="https://formsubmit.co/michael.luk77@gmail.com" method="POST">
+          <input
+            id="email"
+            type="text"
+            placeholder="E-mail"
+            class="input input-bordered input-sm my-input"
+            required
+          />
+          <!-- sm -->
+          <input
+            id="subject"
+            type="text"
+            placeholder="Assunto"
+            class="input input-bordered input-sm my-input"
+            required
+          />
+          <!-- lg -->
+          <textarea
+            id="message"
+            placeholder="Mensagem"
+            class="textarea input-bordered input-lg my-input h-40"
+            required
+          ></textarea>
+          <button type="submit" class="btn">Send</button>
+        </form>
+      </div>
 
-    </section>
+      </section>
 
-    <section>
+      <div class="flex items-center overflow-hidden whitespace-nowrap">
+        <div class="rightToLeft flex gap-10 relative bottom-12">
+        <p>RENATO DOMINGUES </p>
+        <p>RENATO DOMINGUES </p>
+        </div>
 
-    </section>
+    </main>
 
-</main>
-
-    <footer>
-
-    </footer>
-
-</body>
+    <footer></footer>
+  </body>
 </html>
 
-        <!--<div class="flex items-center overflow-hidden py-5 whitespace-nowrap">
-            <div class="rightToLeft flex gap-5">
-            <p>GRAPHIC DESIGNER</p>
-            <p>GRAPHIC DESIGNER</p>
-            </div>
-        </div> -->
+

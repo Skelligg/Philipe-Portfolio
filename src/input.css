@@ -22,7 +22,7 @@
 
     @keyframes RightToLeft {
         from {
-            transform: translateX(0.3%);
+            transform: translateX(0.5%);
         }
         to {
             transform: translateX(-50%);
@@ -32,18 +32,16 @@
     .grid-container {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        height: 200vh;
-
-        
+        height: 400vh;
     }
 
     .grid-item{
         background-color: #f6eee3;
-        object-fit: fill;
         outline: 1px solid;
         position: relative; /* Position relative to use padding trick */
         padding-top: 100%;
     }
+
 
     .work-photo{
         position: absolute;
@@ -52,14 +50,24 @@
         width: 100%;
         height: 100%;
         transition: all 500ms ease-in-out ;
+        object-fit: cover;
     }
 
     .p-photo{
         position: absolute; /* Position absolute within the relative grid item */
-        top: 10px;
-        left: 20px;
-        font-size: 1.125rem;
+        top: 30px;
+        left: 10px;
+        font-size: 1.5rem;
         color: black;
+        text-align: center;
+    }
+
+    .my-input{
+        @apply w-full max-w-md my-2 rounded p-2 
+    } 
+
+    .grey-out{
+        box-shadow: 0 0 1000px rgba(0,0,0);
     }
 
     @media (max-width: 1200px) {
@@ -70,12 +78,13 @@
     @media (max-width: 900px) {
         .grid-container {
             grid-template-columns: repeat(2, 1fr);
+            height: 600vh;
         }
     }
     @media (max-width: 600px) {
         .grid-container {
             display: block;
-            height:2000px
+            height: 980vh;
         }
 
         .grid-item{
