@@ -32,7 +32,6 @@
     .grid-container {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        height: 400vh;
     }
 
     .grid-item{
@@ -67,7 +66,7 @@
     } 
 
     .grey-out{
-        box-shadow: 0 0 1000px rgba(0,0,0);
+        box-shadow: 0 0 100px rgba(0,0,0);
     }
 
     @media (max-width: 1200px) {

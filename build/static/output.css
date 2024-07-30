@@ -1405,7 +1405,6 @@ body {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  height: 400vh;
 }
 
 .grid-item{
@@ -1447,7 +1446,7 @@ body {
 }
 
 .grey-out{
-  box-shadow: 0 0 1000px rgba(0,0,0);
+  box-shadow: 0 0 100px rgba(0,0,0);
 }
 
 @media (max-width: 1200px) {
@@ -1501,6 +1500,22 @@ body {
   left: 0px;
 }
 
+.left-1 {
+  left: 0.25rem;
+}
+
+.left-36 {
+  left: 9rem;
+}
+
+.left-5 {
+  left: 1.25rem;
+}
+
+.left-\[130px\] {
+  left: 130px;
+}
+
 .left-\[70vw\] {
   left: 70vw;
 }
@@ -1511,54 +1526,6 @@ body {
 
 .top-\[320px\] {
   top: 320px;
-}
-
-.left-\[50px\] {
-  left: 50px;
-}
-
-.left-\[70px\] {
-  left: 70px;
-}
-
-.left-\[100px\] {
-  left: 100px;
-}
-
-.left-\[120px\] {
-  left: 120px;
-}
-
-.left-\[130px\] {
-  left: 130px;
-}
-
-.left-1 {
-  left: 0.25rem;
-}
-
-.left-4 {
-  left: 1rem;
-}
-
-.left-5 {
-  left: 1.25rem;
-}
-
-.left-6 {
-  left: 1.5rem;
-}
-
-.left-10 {
-  left: 2.5rem;
-}
-
-.left-32 {
-  left: 8rem;
-}
-
-.left-36 {
-  left: 9rem;
 }
 
 .z-0 {
@@ -1584,6 +1551,14 @@ body {
 .my-2 {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
+.mb-16 {
+  margin-bottom: 4rem;
 }
 
 .ml-16 {
@@ -1626,10 +1601,6 @@ body {
   height: 2000px;
 }
 
-.h-\[55vh\] {
-  height: 55vh;
-}
-
 .h-full {
   height: 100%;
 }
@@ -1654,24 +1625,16 @@ body {
   width: 180px;
 }
 
-.max-w-\[1300px\] {
-  max-width: 1300px;
-}
-
-.max-w-sm {
-  max-width: 24rem;
-}
-
-.max-w-\[550px\] {
-  max-width: 550px;
-}
-
 .max-w-\[1100px\] {
   max-width: 1100px;
 }
 
 .max-w-\[500px\] {
   max-width: 500px;
+}
+
+.max-w-sm {
+  max-width: 24rem;
 }
 
 .-rotate-12 {
